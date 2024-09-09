@@ -1,0 +1,422 @@
+/* JAI SIYA RAM */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Seoge UI' , sans-serif;
+    color: #fff;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    position: relative;
+}
+
+.back{
+    position: absolute;
+    width: 100%;
+    height: 25rem;
+    z-index: -99999;
+}
+
+.back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.front{
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    overflow: hidden;
+}
+
+nav{
+    position: absolute;
+    z-index: 99999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.451);
+    backdrop-filter: blur(3px);
+}
+
+.n-content{
+    position: relative;
+    width: 73%;
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.n-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    scale: .9;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.n-link{
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all ease .5s;
+    font-weight: 100;
+}
+
+.n-link:hover{
+    background: #BC0150;
+    transition: all ease .5s;
+}
+
+.search{
+    border: none;
+    outline: none;
+    color: #000;
+    padding: 10px;
+    background: rgba(255,255,255,.8);
+    backdrop-filter: blur(20px);
+    width: 20%;
+    border-radius: 5px;
+}
+
+.vignette{
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent 19%, rgb(0, 0, 0) 26%);
+}
+
+.content{
+    position: relative;
+    z-index: 2;
+    width: 73%;
+    height: 90rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    top: 16rem;
+}
+
+.poster{
+    position: relative;
+    width: 20%;
+    height: 20%;
+    cursor: pointer;
+}
+
+.poster img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.posterVignette{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(to bottom , #0000007e 10% , transparent 50% , #0000007e 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posterVignette img{
+    opacity: 0;
+    width: 35%;
+    height: 35%;
+    object-fit: cover;
+    mix-blend-mode: color-burn;
+}
+
+.c-right{
+    position: relative;
+    width: 78%;
+}
+
+.c-r-top{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 6%;
+    gap: 10px;
+}
+
+.c-r-top h1{
+    font-family: "Sansita";
+    letter-spacing: -.7px;
+    font-weight: 100;
+}
+
+.c-r-top h2{
+    opacity: .6;
+    font-size: 1.2rem;
+    font-weight: 530;
+}
+
+.c-r-bottom{
+    position: relative;
+    width: 100%;
+    height: 94%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.c-r-b-top{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.c-r-b-top h3{
+    padding: 15px 50px;
+    font-weight: 500;
+    font-size: .9rem;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+.c-r-b-top h3:hover{
+    background: rgba(0, 0, 0, 0.258)
+}
+
+.tabBorder{
+    border-bottom: 2px solid #ff006a;
+}
+
+.noBorder{
+    border: none;
+}
+
+.c-r-b-bottom{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+.summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 125%;
+}
+
+.summary p{
+    font-size: .9rem;
+    line-height: 1.5;
+    letter-spacing: .5px;
+    font-weight: 100;
+}
+
+.details{
+    position: relative;
+}
+
+.dets-top{
+    position: relative;
+    width: 130%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(93, 93, 93, 0.31);
+}
+
+.keyValue{
+    display: flex;
+    flex-wrap: wrap;
+    width: 130%;
+    grid-area: 10px;
+}
+
+.key , .value{
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.key{
+    font-weight: 600;
+}
+
+.value{
+    width: 50%;
+}
+
+.hoverLink{
+    color: #d5015b;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.hoverLink:hover{
+    color: #fff;
+}
+
+.dets-bottom{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px 0;
+    gap: 5px;
+}
+
+.animeCategory{
+    position: relative;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.animeCategory h4{
+    position: relative;
+    padding: 5px;
+    color: #D5015B;
+    font-size: 12px;
+    background: #222222;
+    transition: all 1s;
+    border-radius: 3px;
+    transition: all .2s;
+}
+
+.animeCategory h4:hover{
+    top: -2px;
+    transition: all .2s;
+}
+
+.animeCategory h4::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #D5015B;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    border-radius: 3px;    
+    transition: all .2s;
+}
+
+.animeCategory h4:hover::after {
+    top: 2px;
+    transition: all .2s;
+}
+
+.recomendations{
+    position: relative;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+
+.recomendHeading{
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid #141516;
+    padding-bottom: -2px;
+}
+
+.recomendHeading h3{
+    position: relative;
+    top: 1px;
+    width: fit-content;
+    text-transform: uppercase;
+    border-bottom: 2px solid #D5015B;
+    font-weight: 550;
+    font-size: 1.1rem;
+}
+
+.sHoverLink:hover{
+    color: #d5015b;
+    cursor: pointer;
+}
+
+.sLink{
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sLink:hover{
+    text-decoration: underline;
+}
+
+.w-fit{
+    width: fit-content;
+}
+
+.suggetionContainer{
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.suggetion{
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+.sPoster{
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.sPoster img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sRight{
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.sRight h4{
+    font-size: 15px;
+}
+
+.sRight p{
+    font-size: 11.5px;
+}
