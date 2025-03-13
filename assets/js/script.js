@@ -6,6 +6,17 @@ function loco() {
     })()
 }
 
+function ranCoverChanger() {
+
+
+    let ranNum = Math.floor(Math.random() * 5) + 1
+    
+    document.querySelector(".back img").src = `./assets/img/cover_default${ranNum}.jpg`
+}
+
+
+
+
 function searchBarAnimation() {
     document.addEventListener("click" , function (dets) {
         if (dets.target.className === "search") {
@@ -141,3 +152,4 @@ logoRedirect()
 tabAniamtion()
 coverAnimation()
 posterAnimation()
+ranCoverChanger()
